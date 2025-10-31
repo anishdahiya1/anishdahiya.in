@@ -1,10 +1,14 @@
 /**
- * Keep output file tracing turned on so the build stays aligned with the
- * expectations of upcoming Next.js releases. If a hosted environment still
- * hits the historical micromatch recursion bug, opt out explicitly by
- * setting OUTPUT_FILE_TRACING_DISABLED=1 for that build.
+ * Keep output tracing enabled for local/dev builds so we stay aligned with
+ * the Next.js roadmap, but fall back automatically on Vercel where the
+ * micromatch recursion bug still appears. You can force-enable tracing in
+ * any environment by setting FORCE_OUTPUT_TRACING=1, or opt-out manually by
+ * setting OUTPUT_FILE_TRACING_DISABLED=1.
  */
-const disableTracing = process.env.OUTPUT_FILE_TRACING_DISABLED === '1'
+const isVercel = !!process.env.VERCEL
+const forceTracing = process.env.FORCE_OUTPUT_TRACING === '1'
+const manualDisable = process.env.OUTPUT_FILE_TRACING_DISABLED === '1'
+const disableTracing = manualDisable || (isVercel && !forceTracing)
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
