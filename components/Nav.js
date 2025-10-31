@@ -1,22 +1,23 @@
 import Link from 'next/link'
-import ThemeToggle from './ThemeToggle'
+
+const LINKS = [
+  {href: '/#story', label: 'Story'},
+  {href: '/#work', label: 'Work'},
+  {href: '/#experiments', label: 'Experiments'},
+  {href: '/projects', label: 'Projects'},
+  {href: '/contact', label: 'Contact'}
+]
 
 export default function Nav(){
   return (
-    <div className="container">
-      <header className="nav">
-        <div className="brand">anishdahiya.in</div>
-        <nav>
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/resume">Resume</Link>
-          <Link href="/contact">Contact</Link>
-        </nav>
-        <div style={{display:'flex',gap:12,alignItems:'center'}}>
-          <ThemeToggle />
-        </div>
-      </header>
-    </div>
+    <header className="site-nav">
+      <Link href="/" className="site-nav__brand">Anish Dahiya</Link>
+      <nav className="site-nav__links">
+        {LINKS.map(({href, label}) => (
+          <Link key={href} href={href} className="site-nav__link">{label}</Link>
+        ))}
+      </nav>
+      <a className="site-nav__cta" href="mailto:hello@anishdahiya.in">Let&apos;s collaborate</a>
+    </header>
   )
 }
