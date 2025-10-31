@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Re-enable outputFileTracing (recommended). If Next complains about
-  // collecting traces on your deployment platform, we may need to selectively
-  // exclude folders — however this Next version does not accept
-  // `outputFileTracingExcludes` at the top-level and will warn. If you hit
-  // micromatch recursion issues again, we can either temporarily disable
-  // tracing or reproduce/debug the root cause in a Linux-like environment.
-  outputFileTracing: true,
+  // Enable outputFileTracing by default for local builds to keep parity with
+  // future Next.js expectations, but disable it on Vercel deployments where
+  // we've observed micromatch recursion (RangeError) during trace collection.
+  // Vercel exposes the `VERCEL` env var in its build environment, so we
+  // detect that and turn tracing off there as a pragmatic workaround.
+  // Long-term: remove this conditional and enable tracing once the root
+  // cause is fixed or when Next provides targeted excludes in your version.
+  outputFileTracing: !process.env.VERCEL,
 }
 module.exports = nextConfig
