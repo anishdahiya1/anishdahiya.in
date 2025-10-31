@@ -1,1 +1,21 @@
-self.__BUILD_MANIFEST={polyfillFiles:["static/chunks/polyfills-c67a75d1b6f99dc8.js"],devFiles:[],ampDevFiles:[],lowPriorityFiles:["static/tmic_CYNZDOLonEstlQjC/_buildManifest.js","static/tmic_CYNZDOLonEstlQjC/_ssgManifest.js"],rootMainFiles:[],pages:{"/":["static/chunks/webpack-fd8027ecb5121007.js","static/chunks/framework-bbecb7d54330d002.js","static/chunks/main-bdfcfc23ca93d033.js","static/chunks/pages/index-80bf6638b674f970.js"],"/_app":["static/chunks/webpack-fd8027ecb5121007.js","static/chunks/framework-bbecb7d54330d002.js","static/chunks/main-bdfcfc23ca93d033.js","static/css/e3c5e7bab884892b.css","static/chunks/pages/_app-0e4d84bc3e48cfd8.js"],"/_error":["static/chunks/webpack-fd8027ecb5121007.js","static/chunks/framework-bbecb7d54330d002.js","static/chunks/main-bdfcfc23ca93d033.js","static/chunks/pages/_error-ee5b5fb91d29d86f.js"],"/about":["static/chunks/webpack-fd8027ecb5121007.js","static/chunks/framework-bbecb7d54330d002.js","static/chunks/main-bdfcfc23ca93d033.js","static/chunks/pages/about-25ff9215ed2f8de5.js"],"/contact":["static/chunks/webpack-fd8027ecb5121007.js","static/chunks/framework-bbecb7d54330d002.js","static/chunks/main-bdfcfc23ca93d033.js","static/chunks/pages/contact-f4886741980223d4.js"],"/projects":["static/chunks/webpack-fd8027ecb5121007.js","static/chunks/framework-bbecb7d54330d002.js","static/chunks/main-bdfcfc23ca93d033.js","static/chunks/pages/projects-fb20f6840e161d4e.js"],"/resume":["static/chunks/webpack-fd8027ecb5121007.js","static/chunks/framework-bbecb7d54330d002.js","static/chunks/main-bdfcfc23ca93d033.js","static/chunks/pages/resume-c7f21af25b0fea2d.js"]},ampFirstPages:[]};
+self.__BUILD_MANIFEST = {
+  "polyfillFiles": [
+    "static/chunks/polyfills.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [
+    "static/chunks/webpack.js",
+    "static/chunks/main-app.js"
+  ],
+  "pages": {
+    "/_app": []
+  },
+  "ampFirstPages": []
+};
+self.__BUILD_MANIFEST.lowPriorityFiles = [
+"/static/" + process.env.__NEXT_BUILD_ID + "/_buildManifest.js",
+,"/static/" + process.env.__NEXT_BUILD_ID + "/_ssgManifest.js",
+
+];
