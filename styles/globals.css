@@ -27,7 +27,7 @@ body{
 
 /* minimal background — keep it subtle and calm */
 #bg-gradient{position:fixed;inset:0;z-index:-3;pointer-events:none; background: radial-gradient(700px 220px at 8% 12%, rgba(10,132,255,0.04), transparent 12%), radial-gradient(520px 180px at 92% 88%, rgba(0,200,170,0.02), transparent 14%); filter: blur(20px);}
-#particle-canvas{position:fixed;inset:0;z-index:-2;opacity:0.06}
+#particle-canvas{position:fixed;inset:0;z-index:-2;opacity:0.9}
 
 /* animated translucent blobs on top of the background for a subtle living effect */
 /* keep decorative blobs extremely subtle for a sober look */
@@ -120,3 +120,15 @@ footer{padding:48px 0;text-align:center;color:var(--muted)}
 footer{padding:28px 20px;text-align:center;color:var(--muted)}
 @media (max-width:720px){.nav{padding:12px 4vw}.hero-glass{padding:26px;border-radius:12px}.hero{min-height:60vh}}
 .hero-glass:after{content:"";position:absolute;left:0;right:0;top:0;height:80px;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;mix-blend-mode:overlay}
+
+/* Dark theme variables */
+html[data-theme='dark']{
+  --bg-a: #071226;
+  --bg-b: rgba(7,18,38,0.6);
+  --glass: rgba(10,12,20,0.55);
+  --glass-2: rgba(8,10,14,0.6);
+  --accent: #7c5cff;
+  --muted: #9aa6b2;
+  --card-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  --glass-border: rgba(255,255,255,0.03);
+}

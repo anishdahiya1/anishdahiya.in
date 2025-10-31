@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Script from 'next/script'
 import Layout from '../components/Layout'
 import Image from 'next/image'
 import Socials from '../components/Socials'
@@ -18,11 +17,7 @@ export default function Home(){
         <section className="hero">
           <div className="hero-glass">
             <div style={{display:'flex',gap:20,alignItems:'center'}}>
-              <div style={{flex:'0 0 auto'}}>
-                <div className="avatar">
-                  <Image src="/images/profile2-420.webp" alt="Anish Dahiya" width={120} height={120} style={{borderRadius:14}} priority />
-                </div>
-              </div>
+              {/* avatar removed for a cleaner, modern landing look */}
               <div>
                 <h1>Anish Dahiya — Data Scientist · Content Creator · Travel Vlogger</h1>
                 <p className="roles">I’m a Computer Science Engineer focused on Artificial Intelligence and Machine Learning, and I also create travel videos and short-form content that document journeys and storytelling. I split my time between building data-driven ML systems (NLP, CV, analytics) and producing creative video content.</p>
@@ -35,10 +30,7 @@ export default function Home(){
               <a className="btn ghost" href="#contact">Get in touch</a>
             </div>
 
-            <div className="live-widgets">
-              <div className="widget clock" aria-label="Local time">--:--</div>
-              <div className="widget visitors">Visitors: <span id="visitors">0</span></div>
-            </div>
+            {/* live widgets removed (clock/visitors) */}
           </div>
         </section>
 
@@ -110,7 +102,7 @@ export default function Home(){
         <small>© Anish Dahiya — anishdahiya.in</small>
       </footer>
 
-      <Script src="/script.js" strategy="afterInteractive" />
+  {/* removed /script.js which updated clock/visitor counts */}
     </>
   )
 }
