@@ -2,13 +2,14 @@ import Head from 'next/head'
 import Script from 'next/script'
 import Layout from '../components/Layout'
 import Image from 'next/image'
+import Socials from '../components/Socials'
 
 export default function Home(){
   return (
     <>
       <Head>
-        <title>Anish Dahiya — Data Scientist | AI/ML Engineer | Innovator</title>
-        <meta name="description" content="Anish Dahiya — AI/ML engineer building data-driven solutions in NLP, CV and analytics." />
+        <title>Anish Dahiya — Data Scientist · Content Creator · Travel Vlogger</title>
+        <meta name="description" content="Anish Dahiya — AI/ML engineer, content creator and travel vlogger. I build data-driven systems and create travel videos that explore places and stories." />
       </Head>
       <Layout>
         <div id="bg-gradient" />
@@ -23,13 +24,14 @@ export default function Home(){
                 </div>
               </div>
               <div>
-                <h1>Anish Dahiya — Data Scientist | AI/ML Engineer | Innovator</h1>
-                <p className="roles">I’m a Computer Science Engineer specializing in Artificial Intelligence and Machine Learning. I build data-driven models and systems (NLP, CV, analytics) that solve real problems and push the boundaries of intelligent automation.</p>
+                <h1>Anish Dahiya — Data Scientist · Content Creator · Travel Vlogger</h1>
+                <p className="roles">I’m a Computer Science Engineer focused on Artificial Intelligence and Machine Learning, and I also create travel videos and short-form content that document journeys and storytelling. I split my time between building data-driven ML systems (NLP, CV, analytics) and producing creative video content.</p>
               </div>
             </div>
 
             <div className="hero-cta">
               <a className="btn" href="#work">See my work</a>
+              <a className="btn ghost" href="#videos">Watch vlogs</a>
               <a className="btn ghost" href="#contact">Get in touch</a>
             </div>
 
@@ -77,15 +79,30 @@ export default function Home(){
             </div>
           </div>
         </section>
+        <section id="videos" className="section projects">
+          <h2>Video & Creator Work</h2>
+          <div className="projects-grid">
+            <div className="project card tilt" data-title="Travel Vlog - Mountains">
+              <img src="https://picsum.photos/600/400?random=11" alt="Thumbnail of travel vlog"/>
+              <div className="project-body">
+                <h4>Travel Vlog — Mountains</h4>
+                <p>Short travel film exploring remote mountain towns, local food and landscapes.</p>
+              </div>
+            </div>
+            <div className="project card tilt" data-title="Shorts - Street Food">
+              <img src="https://picsum.photos/600/400?random=12" alt="Thumbnail of short video"/>
+              <div className="project-body">
+                <h4>Shorts — Street Food</h4>
+                <p>Quick edits and highlights from food trips and city walks.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section id="contact" className="section contact">
           <h2>Contact</h2>
           <p>If you'd like to work together, email me at <a href="mailto:hello@anishdahiya.in">hello@anishdahiya.in</a>.</p>
-          <div className="socials">
-            <a href="#">GitHub</a>
-            <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
-          </div>
+          <Socials />
         </section>
       </Layout>
 
