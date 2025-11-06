@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { navItems } from "@/lib/data";
+import { socials } from "@/lib/data";
 import { ModeToggle } from "./mode-toggle";
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
@@ -34,6 +35,13 @@ export function Navbar() {
               {item.title}
             </Link>
           ))}
+          <Link
+            href={socials.instagram}
+            target="_blank"
+            className="text-sm font-medium text-slate-600 transition hover:text-brand-500 dark:text-slate-300"
+          >
+            Instagram
+          </Link>
           <ModeToggle />
         </nav>
         <button
@@ -72,7 +80,15 @@ export function Navbar() {
                 </li>
               ))}
             </ul>
-            <div className="mt-4">
+            <div className="mt-4 flex items-center justify-between">
+              <Link
+                href={socials.instagram}
+                target="_blank"
+                className="rounded-lg px-3 py-2 text-base font-medium text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+                onClick={() => setOpen(false)}
+              >
+                Instagram
+              </Link>
               <ModeToggle />
             </div>
           </motion.nav>

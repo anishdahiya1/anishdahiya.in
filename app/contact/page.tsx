@@ -62,9 +62,6 @@ export default function ContactPage() {
               <Link href={socials.linkedin} target="_blank" className="hover:text-brand-500">
                 LinkedIn
               </Link>
-              <Link href={socials.twitter} target="_blank" className="hover:text-brand-500">
-                X (Twitter)
-              </Link>
               <Link href={socials.youtube} target="_blank" className="hover:text-brand-500">
                 YouTube
               </Link>

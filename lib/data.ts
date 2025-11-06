@@ -177,7 +177,6 @@ export const socials = {
   youtube: "https://www.youtube.com/@AnishDahiya8",
   linkedin: "https://www.linkedin.com/in/anishdahiya7/",
   github: "https://github.com/anishdahiya1",
-  twitter: "https://x.com/anishcodes",
   instagram: "https://www.instagram.com/anishdahiya08/"
 };
 

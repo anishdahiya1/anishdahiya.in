@@ -25,9 +25,6 @@ export function Footer() {
           <Link href={socials.youtube} className="hover:text-brand-500" target="_blank">
             YouTube
           </Link>
-          <Link href={socials.twitter} className="hover:text-brand-500" target="_blank">
-            X (Twitter)
-          </Link>
           <Link href="https://x-corp.in" className="hover:text-brand-500" target="_blank">
             X-Corp
           </Link>
