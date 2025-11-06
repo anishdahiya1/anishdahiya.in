@@ -56,6 +56,9 @@ export default function ContactPage() {
               {socials.email} →
             </Link>
             <div className="flex flex-wrap gap-3 pt-2 text-sm text-slate-500">
+              <Link href={socials.instagram} target="_blank" className="hover:text-brand-500">
+                Instagram
+              </Link>
               <Link href={socials.linkedin} target="_blank" className="hover:text-brand-500">
                 LinkedIn
               </Link>

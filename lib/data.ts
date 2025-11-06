@@ -80,19 +80,37 @@ export const timeline: TimelineEntry[] = [
     year: "2025",
     title: "Scaling X-Corp",
     description:
-      "Building an applied AI lab focused on intelligent automation, developer tooling, and creative co-pilots for enterprise teams."
+      "Building an applied AI lab focused on intelligent automation, developer tooling, and creative co-pilots for enterprise teams. Now live at x-corp.in."
+  },
+  {
+    year: "Nov 2025",
+    title: "Content Creator",
+    description:
+      "Started publishing consistently across YouTube and LinkedIn—documenting AI, data science, and creator systems."
   },
   {
     year: "2023",
-    title: "Lead Data Scientist",
+    title: "Data Scientist",
     description:
       "Led cross-functional squads shipping personalization and risk intelligence models used by millions of customers."
   },
   {
-    year: "2021",
-    title: "Content Creator",
+    year: "2023",
+    title: "Bus Congestion Prediction (DIMTS)",
     description:
-      "Launched weekly deep-dives on YouTube and LinkedIn demystifying machine learning systems, career strategy, and mindful productivity."
+      "Built a congestion prediction model for Delhi Integrated Multi-Modal Transit System to forecast bus load and improve scheduling."
+  },
+  {
+    year: "2022–2024",
+    title: "SME — Computer Science (Chegg)",
+    description:
+      "Solved curriculum-aligned problems and authored explanations for CS learners while pursuing undergrad."
+  },
+  {
+    year: "2021–2025",
+    title: "B.Tech CSE (AIML), Chandigarh University",
+    description:
+      "Specialized in Artificial Intelligence & Machine Learning with hands-on projects across CV, NLP, and forecasting."
   },
   {
     year: "2018",
@@ -106,14 +124,14 @@ export const contentHighlights: ContentPiece[] = [
   {
     title: "The Data Scientist OS",
     platform: "YouTube",
-    url: "https://youtube.com/@anishdahiya",
+    url: "https://www.youtube.com/@AnishDahiya8",
     summary:
       "Long-form series unpacking the workflows, automations, and mental models that help data teams ship impact at startup speed."
   },
   {
     title: "Architecting AI Strategy",
     platform: "LinkedIn",
-    url: "https://www.linkedin.com/in/anishdahiya",
+    url: "https://www.linkedin.com/in/anishdahiya7/",
     summary:
       "LinkedIn newsletter where I share playbooks on building defensible AI capabilities without the hype."
   },
@@ -155,11 +173,12 @@ export const testimonials: Testimonial[] = [
 ];
 
 export const socials = {
-  email: "hello@anishdahiya.in",
-  youtube: "https://youtube.com/@anishdahiya",
-  linkedin: "https://www.linkedin.com/in/anishdahiya",
+  email: "anishdahiya89@gmail.com",
+  youtube: "https://www.youtube.com/@AnishDahiya8",
+  linkedin: "https://www.linkedin.com/in/anishdahiya7/",
   github: "https://github.com/anishdahiya1",
-  twitter: "https://x.com/anishcodes"
+  twitter: "https://x.com/anishcodes",
+  instagram: "https://www.instagram.com/anishdahiya08/"
 };
 
 export const blogPosts: BlogPost[] = [

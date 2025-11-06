@@ -13,6 +13,9 @@ export function Footer() {
           <Link href={`mailto:${socials.email}`} className="hover:text-brand-500">
             Email
           </Link>
+          <Link href={socials.instagram} className="hover:text-brand-500" target="_blank">
+            Instagram
+          </Link>
           <Link href={socials.linkedin} className="hover:text-brand-500" target="_blank">
             LinkedIn
           </Link>
@@ -24,6 +27,9 @@ export function Footer() {
           </Link>
           <Link href={socials.twitter} className="hover:text-brand-500" target="_blank">
             X (Twitter)
+          </Link>
+          <Link href="https://x-corp.in" className="hover:text-brand-500" target="_blank">
+            X-Corp
           </Link>
         </div>
       </div>

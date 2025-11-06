@@ -8,12 +8,12 @@ const playlists = [
   {
     title: "The Applied AI Almanac",
     description: "Deep dives on building intelligent products end-to-end—from ideation to post-launch stewardship.",
-    link: "https://youtube.com/@anishdahiya"
+    link: "https://www.youtube.com/@AnishDahiya8"
   },
   {
     title: "Creator OS",
     description: "Systems, rituals, and templates to build a content engine while leading high-stakes teams.",
-    link: "https://youtube.com/@anishdahiya"
+    link: "https://www.youtube.com/@AnishDahiya8"
   },
   {
     title: "Signals & Stories",

@@ -29,6 +29,9 @@ export default function AboutPage() {
           <p className="text-lg text-slate-600 dark:text-slate-300">
             My work spans predictive modeling, computer vision, and generative systems. I love translating complex technology into crisp strategy for leadership teams, and I document the journey for builders around the world through my creator studio.
           </p>
+          <p className="text-lg text-slate-600 dark:text-slate-300">
+            I studied B.Tech in CSE (AIML) at Chandigarh University from 2021–2025, worked as a Subject Matter Expert (Computer Science) at Chegg, and built a bus congestion prediction model for DIMTS in 2023. Today, I'm a data scientist and creator, building X-Corp and publishing regularly across YouTube and LinkedIn.
+          </p>
           <div className="grid gap-6 sm:grid-cols-3">
             {stats.map((stat) => (
               <div key={stat.label} className="rounded-2xl border border-slate-200 bg-white/80 p-4 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900/70">

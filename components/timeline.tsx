@@ -14,7 +14,7 @@ export function Timeline({ entries }: TimelineProps) {
       <ul className="space-y-12">
         {entries.map((entry, index) => (
           <motion.li
-            key={entry.year}
+            key={`${entry.year}-${entry.title}`}
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.05, duration: 0.4 }}
