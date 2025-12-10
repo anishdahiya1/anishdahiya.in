@@ -199,7 +199,7 @@ export const socials = {
   youtube: "https://www.youtube.com/@AnishDahiya8",
   linkedin: "https://www.linkedin.com/in/anishdahiya7/",
   github: "https://github.com/anishdahiya1",
-  instagram: "https://www.instagram.com/anishdahiya08/"
+  instagram: "https://www.instagram.com/anishdahiya16/"
 };
 
 export const blogPosts: BlogPost[] = [
