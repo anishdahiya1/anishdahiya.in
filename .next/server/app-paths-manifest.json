@@ -1,3 +1,15 @@
 {
-  "/page": "app/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
+  "/about/page": "app/about/page.js",
+  "/content/page": "app/content/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/projects/page": "app/projects/page.js",
+  "/blog/[slug]/page": "app/blog/[slug]/page.js",
+  "/projects/diamond-price-prediction/page": "app/projects/diamond-price-prediction/page.js",
+  "/projects/document-theme-identifier/page": "app/projects/document-theme-identifier/page.js",
+  "/projects/acoustic-keyboard-detection/page": "app/projects/acoustic-keyboard-detection/page.js",
+  "/projects/wafer-fault-detection/page": "app/projects/wafer-fault-detection/page.js",
+  "/projects/parkinsons-disease-prediction/page": "app/projects/parkinsons-disease-prediction/page.js"
 }

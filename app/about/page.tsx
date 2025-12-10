@@ -24,13 +24,13 @@ export default function AboutPage() {
             Architecting the intersection of data, design, and narrative.
           </h1>
           <p className="text-lg text-slate-600 dark:text-slate-300">
-            I'm Anish Dahiya, a data scientist and storyteller who builds intelligent products and communities. At X-Corp, I lead a team experimenting with applied AI—from platform strategy and model architecture to change management and creative automation.
+            I'm Anish Dahiya, a data scientist and storyteller who builds intelligent products and communities. I lead teams experimenting with applied AI—from platform strategy and model architecture to change management and creative automation.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
             My work spans predictive modeling, computer vision, and generative systems. I love translating complex technology into crisp strategy for leadership teams, and I document the journey for builders around the world through my creator studio.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300">
-            I studied B.Tech in CSE (AIML) at Chandigarh University from 2021–2025, worked as a Subject Matter Expert (Computer Science) at Chegg, and built a bus congestion prediction model for DIMTS in 2023. Today, I'm a data scientist and creator, building X-Corp and publishing regularly across YouTube and LinkedIn.
+            I studied B.Tech in CSE (AIML) at Chandigarh University from 2021–2025, worked as a Subject Matter Expert (Computer Science) at Chegg, and built a bus congestion prediction model for DIMTS in 2023. Today, I'm a data scientist and creator, sharing my work across YouTube and LinkedIn.
           </p>
           <div className="grid gap-6 sm:grid-cols-3">
             {stats.map((stat) => (

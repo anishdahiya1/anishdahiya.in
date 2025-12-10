@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     template: "%s · Anish Dahiya"
   },
   description:
-    "Data scientist, storyteller, and founder of X-Corp. Crafting intelligent systems, content, and companies that move people forward.",
+    "Data scientist and storyteller crafting intelligent systems, content, and companies that move people forward.",
   openGraph: {
     title: "Anish Dahiya",
     description:
-      "Data scientist, storyteller, and founder of X-Corp. Crafting intelligent systems, content, and companies that move people forward.",
+      "Data scientist and storyteller crafting intelligent systems, content, and companies that move people forward.",
     url: "https://anishdahiya.in",
     siteName: "Anish Dahiya",
     images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Anish Dahiya",
     description:
-      "Data scientist, storyteller, and founder of X-Corp. Crafting intelligent systems, content, and companies that move people forward.",
+      "Data scientist and storyteller crafting intelligent systems, content, and companies that move people forward.",
     creator: "@anishcodes"
   }
 };

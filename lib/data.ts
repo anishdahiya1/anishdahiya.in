@@ -9,6 +9,8 @@ export type Project = {
   tags: string[];
   link: string;
   year: string;
+  external?: boolean;
+  linkLabel?: string;
 };
 
 export type TimelineEntry = {
@@ -42,7 +44,6 @@ export const navItems: NavItem[] = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
   { title: "Projects", href: "/projects" },
-  { title: "X-Corp", href: "/x-corp" },
   { title: "Content", href: "/content" },
   { title: "Blog", href: "/blog" },
   { title: "Contact", href: "/contact" }
@@ -50,37 +51,58 @@ export const navItems: NavItem[] = [
 
 export const projects: Project[] = [
   {
-    title: "FluxPulse Forecasting",
+    title: "Document Theme Identifier",
     description:
-      "Unified forecasting pipeline that blends econometric models with transformer-based architectures to predict market volatility for fintech clients.",
-    tags: ["Time Series", "Transformers", "MLOps"],
-    link: "https://github.com/anishdahiya1/fluxpulse",
-    year: "2024"
+      "LLM-powered research chatbot that ingests 75+ docs, runs OCR + embeddings, and answers queries with citation-backed summaries.",
+    tags: ["RAG", "NLP", "LLM"],
+    link: "/projects/document-theme-identifier",
+    year: "2025",
+    linkLabel: "Explore AI assistant"
   },
   {
-    title: "Narrator AI",
+    title: "Diamond Price Prediction",
     description:
-      "Multi-modal storytelling tool that turns raw product analytics into narrative walkthroughs using retrieval augmented generation.",
-    tags: ["GenAI", "LLM", "RAG"],
-    link: "https://github.com/anishdahiya1/narrator-ai",
-    year: "2023"
+      "Predictive pricing engine that cleanses diamond attributes, trains ensemble regressors, and exposes results through a polished Flask web app.",
+    tags: ["Regression", "Flask", "Pricing"],
+    link: "/projects/diamond-price-prediction",
+    year: "2023",
+    linkLabel: "Try pricing lab"
   },
   {
-    title: "Atlas Vision",
+    title: "Parkinson's Disease Prediction",
     description:
-      "Computer vision platform built for manufacturing QA teams with real-time defect detection and human-in-the-loop review tooling.",
-    tags: ["Computer Vision", "Edge AI", "MLOps"],
-    link: "https://github.com/anishdahiya1/atlas-vision",
-    year: "2022"
+      "Biomedical voice analytics pipeline that standardizes acoustic biomarkers and trains interpretable classifiers for early Parkinson's screening.",
+    tags: ["Healthcare AI", "Classification", "Logistic Regression"],
+    link: "/projects/parkinsons-disease-prediction",
+    year: "2022",
+    linkLabel: "Review diagnostic build"
+  },
+  {
+    title: "Acoustic Keyboard Detection",
+    description:
+      "Deep learning system that hears keyboard keystrokes via MFCC features and a custom 1D-CNN, shipped with a Streamlit UI for real-time inference.",
+    tags: ["Audio AI", "Deep Learning", "Streamlit"],
+    link: "/projects/acoustic-keyboard-detection",
+    year: "2024",
+    linkLabel: "View Streamlit build"
+  },
+  {
+    title: "Wafer Fault Detection",
+    description:
+      "End-to-end ML workflow that validates 590-sensor wafer batches, clusters signals, and selects the best Random Forest/XGBoost model per cluster.",
+    tags: ["Anomaly Detection", "MLOps", "AWS"],
+    link: "/projects/wafer-fault-detection",
+    year: "2024",
+    linkLabel: "Read case study"
   }
 ];
 
 export const timeline: TimelineEntry[] = [
   {
     year: "2025",
-    title: "Scaling X-Corp",
+    title: "Applied AI Practice",
     description:
-      "Building an applied AI lab focused on intelligent automation, developer tooling, and creative co-pilots for enterprise teams. Now live at x-corp.in."
+      "Leading cross-functional efforts to build intelligent automation, developer tooling, and creative co-pilots for enterprise teams."
   },
   {
     year: "Nov 2025",

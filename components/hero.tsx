@@ -37,15 +37,16 @@ export function Hero() {
           className="space-y-8"
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-brand-100 bg-brand-50 px-4 py-2 text-sm font-medium text-brand-700 dark:border-brand-500/30 dark:bg-brand-500/10 dark:text-brand-200">
-            Data Scientist • Creator • Founder, X-Corp
+            Data Scientist • Creator 
           </span>
           <h1 className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl md:text-6xl md:whitespace-nowrap">
             Designing intelligent systems that move people forward.
           </h1>
           <p className="max-w-2xl text-lg text-slate-600 dark:text-slate-300">
-            I'm Anish Dahiya — a data scientist building practical AI products at X-Corp and
-            documenting the process for builders. I help teams move from prototype to production
-            with pragmatic model design, robust data pipelines, and repeatable shipping patterns.
+            I'm Anish Dahiya — a data scientist building practical AI products with high-velocity
+            teams and documenting the process for builders. I help organizations move from
+            prototype to production with pragmatic model design, robust data pipelines, and
+            repeatable shipping patterns.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link

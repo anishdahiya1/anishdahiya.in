@@ -10,6 +10,9 @@ type ProjectCardProps = {
 };
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
+  const isExternal = project.external ?? project.link.startsWith("http");
+  const linkLabel = project.linkLabel ?? "View case study";
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 24 }}
@@ -35,10 +38,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       <div className="mt-6">
         <Link
           href={project.link}
-          target="_blank"
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noreferrer" : undefined}
           className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 transition hover:text-brand-500 dark:text-brand-300"
         >
-          View case study →
+          {linkLabel} →
         </Link>
       </div>
     </motion.article>

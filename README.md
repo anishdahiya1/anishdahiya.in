@@ -1,10 +1,10 @@
 # anishdahiya.in
 
-Personal site and digital studio for **Anish Dahiya** — data scientist, content creator, and founder of X-Corp. Built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion.
+Personal site and digital studio for **Anish Dahiya** — data scientist and content creator. Built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion.
 
 ## Features
 
-- App Router architecture with statically-optimized sections for Home, About, Projects, X-Corp, Content, Blog, and Contact
+- App Router architecture with statically-optimized sections for Home, About, Projects, Content, Blog, and Contact
 - Responsive design system with custom typography, gradients, and dark mode (via `next-themes`)
 - Motion-first UI using Framer Motion for subtle transitions, hero animations, and timeline interactions
 - Reusable components for hero, section headings, project cards, testimonials, timelines, content grids, and contact forms

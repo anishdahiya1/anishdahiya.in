@@ -57,7 +57,7 @@ export default function HomePage() {
       <section className="space-y-6 rounded-3xl border border-slate-200 bg-gradient-to-br from-brand-500 via-brand-600 to-brand-700 p-10 text-slate-50 shadow-2xl dark:border-slate-800 dark:from-brand-400 dark:via-brand-500 dark:to-brand-700">
         <h2 className="font-display text-3xl font-semibold">Bring intelligence to your roadmap.</h2>
         <p className="max-w-3xl text-base text-slate-100/80">
-          Whether you're scaling product personalization, building a data platform, or crafting AI-native experiences, let's explore how X-Corp can partner with your team.
+          Whether you're scaling product personalization, building a data platform, or crafting AI-native experiences, let's explore how we can partner to bring your roadmap to life.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row">
           <Link
