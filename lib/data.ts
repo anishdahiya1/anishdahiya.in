@@ -98,22 +98,16 @@ export const projects: Project[] = [
 
 export const timeline: TimelineEntry[] = [
   {
-    year: "2025",
-    title: "Applied AI Practice",
+    year: "Apr 2025 – Present",
+    title: "Data Scientist, Applied AI",
     description:
-      "Leading cross-functional efforts to build intelligent automation, developer tooling, and creative co-pilots for enterprise teams."
+      "Joined a fast-moving ML team to ship production-ready models, tighten evaluation loops, and translate research spikes into real user impact."
   },
   {
-    year: "Nov 2025",
-    title: "Content Creator",
+    year: "2024",
+    title: "AI internships + capstone",
     description:
-      "Started publishing consistently across YouTube and LinkedIn—documenting AI, data science, and creator systems."
-  },
-  {
-    year: "2023",
-    title: "Data Scientist",
-    description:
-      "Led cross-functional squads shipping personalization and risk intelligence models used by millions of customers."
+      "Split time between research internships and my final-year project, hardening MLOps pipelines and documenting lessons for the next cohort."
   },
   {
     year: "2023",
@@ -132,12 +126,6 @@ export const timeline: TimelineEntry[] = [
     title: "B.Tech CSE (AIML), Chandigarh University",
     description:
       "Specialized in Artificial Intelligence & Machine Learning with hands-on projects across CV, NLP, and forecasting."
-  },
-  {
-    year: "2018",
-    title: "First ML Deployment",
-    description:
-      "Productionized a churn prediction pipeline that saved 1M USD in annualized revenue for a telecom conglomerate."
   }
 ];
 
