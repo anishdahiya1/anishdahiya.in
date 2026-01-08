@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import clsx from "clsx";
 import type { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" });
@@ -48,6 +49,20 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-E88SZKL0GV"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-E88SZKL0GV');
+          `}
+        </Script>
+      </head>
       <body className={clsx(inter.variable, spaceGrotesk.variable, "min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 font-sans text-slate-900 antialiased dark:from-slate-950 dark:via-slate-900 dark:to-slate-950")}
       >
         <ThemeProvider enableSystem attribute="class">
