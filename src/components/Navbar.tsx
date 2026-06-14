@@ -33,7 +33,7 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "border-b border-white/[0.06] bg-zinc-950/90 backdrop-blur-xl"
+          ? "border-b border-white/[0.07] bg-zinc-950/75 backdrop-blur-2xl"
           : "bg-transparent"
       }`}
     >
@@ -41,7 +41,7 @@ export function Navbar() {
         {/* Logo */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="font-display text-base font-semibold text-white tracking-tight"
+          className="font-display text-base font-semibold text-white tracking-tight transition hover:text-blue-200"
         >
           Anish<span className="text-blue-400">.</span>
         </button>
@@ -73,7 +73,7 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <a
             href={`mailto:${socials.email}`}
-            className="rounded-full bg-white/[0.06] border border-white/[0.08] px-4 py-1.5 text-sm text-zinc-300 transition hover:bg-white/[0.10] hover:text-white"
+            className="rounded-full bg-white/[0.05] border border-white/[0.08] px-4 py-1.5 text-sm text-zinc-200 transition duration-300 hover:-translate-y-0.5 hover:bg-white/[0.10] hover:text-white"
           >
             Get in touch
           </a>
@@ -96,7 +96,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.18 }}
-            className="md:hidden border-t border-white/[0.06] bg-zinc-950/98 backdrop-blur-xl"
+            className="md:hidden border-t border-white/[0.06] bg-zinc-950/96 backdrop-blur-2xl"
           >
             <ul className="mx-4 py-3 space-y-0.5">
               {navItems.map((item) => (

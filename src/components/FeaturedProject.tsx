@@ -27,25 +27,25 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className="group relative overflow-hidden rounded-3xl border border-white/[0.08] bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950"
+      className="group relative overflow-hidden rounded-[1.75rem] border border-white/[0.09] bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.12),transparent_26%),linear-gradient(180deg,rgba(255,255,255,0.035),rgba(255,255,255,0.02))] backdrop-blur-xl"
     >
       {/* Ambient glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-amber-500/[0.06] blur-[120px]" />
-        <div className="absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full bg-orange-600/[0.04] blur-[80px]" />
+        <div className="absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-amber-500/[0.08] blur-[120px]" />
+        <div className="absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full bg-sky-500/[0.05] blur-[100px]" />
       </div>
 
       {/* Top border highlight */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-400/50 to-transparent" />
 
       <div className="relative p-8 md:p-12">
         {/* Label row */}
         <div className="mb-8 flex items-center gap-3">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/20 bg-amber-500/[0.08] px-3 py-1 text-xs font-semibold text-amber-400 tracking-wide">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/20 bg-amber-500/[0.08] px-3 py-1 text-xs font-semibold text-amber-300 tracking-wide backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse" />
             Featured Project
           </span>
-          <span className="text-xs text-zinc-600">{project.year}</span>
+          <span className="text-xs text-zinc-400">{project.year}</span>
         </div>
 
         <div className="grid gap-12 lg:grid-cols-[1fr_420px]">
@@ -57,16 +57,16 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
                 हि
               </div>
               <div>
-                <h3 className="font-display text-3xl md:text-4xl font-bold text-white leading-tight">
+                <h3 className="font-display text-3xl md:text-4xl font-bold text-white leading-tight tracking-tight">
                   {project.title}
                 </h3>
-                <p className="mt-1 text-sm text-zinc-500 font-mono">
+                <p className="mt-1 text-sm text-zinc-400 font-mono">
                   Pretraining → SFT → Deployment
                 </p>
               </div>
             </div>
 
-            <p className="text-zinc-400 leading-relaxed text-base max-w-lg">
+            <p className="text-zinc-300/75 leading-relaxed text-base max-w-lg">
               {project.description}
             </p>
 
@@ -78,7 +78,7 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={inView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ delay: 0.3 + i * 0.06 }}
-                  className="rounded-full border border-white/[0.07] bg-white/[0.03] px-3 py-1 text-xs text-zinc-400"
+                  className="rounded-full border border-white/[0.08] bg-white/[0.04] px-3 py-1 text-xs text-zinc-300/75 backdrop-blur-sm"
                 >
                   {step}
                 </motion.span>
@@ -90,7 +90,7 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full bg-amber-500/[0.08] px-3 py-0.5 text-xs font-medium text-amber-400/80"
+                  className="rounded-full bg-amber-500/[0.08] px-3 py-0.5 text-xs font-medium text-amber-300/85"
                 >
                   {tag}
                 </span>
@@ -98,13 +98,13 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
             </div>
 
             {/* Perplexity stat — the big win */}
-            <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5">
+            <div className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-5 backdrop-blur-sm">
               <p className="text-xs font-mono text-zinc-600 uppercase tracking-widest mb-3">
                 Training Result
               </p>
               <div className="flex items-end gap-4">
                 <div>
-                  <p className="text-xs text-zinc-600 mb-1">Perplexity start</p>
+                  <p className="text-xs text-zinc-500 mb-1">Perplexity start</p>
                   <p className="font-display text-2xl font-bold text-zinc-400">~400</p>
                 </div>
                 <div className="flex-1 flex items-center gap-2 mb-2">
@@ -112,11 +112,11 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
                   <span className="text-xs text-zinc-600">→</span>
                 </div>
                 <div>
-                  <p className="text-xs text-zinc-600 mb-1">Perplexity final</p>
+                  <p className="text-xs text-zinc-500 mb-1">Perplexity final</p>
                   <p className="font-display text-2xl font-bold text-emerald-400">~53</p>
                 </div>
                 <div className="ml-2">
-                  <p className="text-xs text-zinc-600 mb-1">Reduction</p>
+                  <p className="text-xs text-zinc-500 mb-1">Reduction</p>
                   <p className="font-display text-2xl font-bold text-amber-400">86%</p>
                 </div>
               </div>
@@ -127,7 +127,7 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group/btn inline-flex h-11 items-center gap-2 rounded-full bg-amber-500 px-6 text-sm font-semibold text-zinc-950 transition hover:bg-amber-400"
+              className="group/btn inline-flex h-11 items-center gap-2 rounded-full bg-amber-500 px-6 text-sm font-semibold text-zinc-950 transition duration-300 hover:-translate-y-0.5 hover:bg-amber-400 hover:shadow-[0_18px_50px_rgba(245,158,11,0.18)]"
             >
               Try live demo
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />

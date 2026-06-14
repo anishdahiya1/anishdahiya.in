@@ -180,7 +180,7 @@ export function StarfieldBackground() {
       <div className="fixed inset-0 z-[1] pointer-events-none overflow-hidden" aria-hidden>
         {/* Purple nebula — top right */}
         <div
-          className="absolute"
+          className="absolute animate-drift"
           style={{
             top: "-10%", right: "-10%",
             width: 700, height: 700,
@@ -191,7 +191,7 @@ export function StarfieldBackground() {
         />
         {/* Blue nebula — left center */}
         <div
-          className="absolute"
+          className="absolute animate-drift-slow"
           style={{
             top: "30%", left: "-8%",
             width: 600, height: 600,
@@ -202,13 +202,29 @@ export function StarfieldBackground() {
         />
         {/* Teal nebula — bottom center */}
         <div
-          className="absolute"
+          className="absolute animate-pulse-soft"
           style={{
             bottom: "-5%", left: "35%",
             width: 500, height: 500,
             borderRadius: "50%",
             background: "radial-gradient(circle, rgba(6,78,59,0.10) 0%, transparent 70%)",
             filter: "blur(40px)",
+          }}
+        />
+
+        <div
+          className="absolute inset-x-0 top-1/3 h-[1px] animate-scan"
+          style={{ background: "linear-gradient(90deg, transparent, rgba(56,189,248,0.42), rgba(255,255,255,0.12), transparent)" }}
+        />
+
+        <div
+          className="absolute inset-0 opacity-[0.12]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(148,163,184,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.18) 1px, transparent 1px)",
+            backgroundSize: "72px 72px",
+            maskImage: "radial-gradient(circle at center, black 18%, transparent 74%)",
+            WebkitMaskImage: "radial-gradient(circle at center, black 18%, transparent 74%)",
           }}
         />
       </div>

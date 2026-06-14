@@ -29,10 +29,12 @@ export function CursorSpotlight() {
           translateX: "-50%",
           translateY: "-50%",
         }}
-        className="absolute w-[600px] h-[600px] rounded-full pointer-events-none"
+        className="absolute w-[620px] h-[620px] rounded-full pointer-events-none mix-blend-screen"
         aria-hidden
       >
-        <div className="w-full h-full rounded-full bg-gradient-radial from-blue-600/[0.07] to-transparent" />
+        <div className="absolute inset-0 rounded-full bg-gradient-radial from-cyan-400/[0.08] via-blue-600/[0.06] to-transparent animate-pulse-soft" />
+        <div className="absolute inset-[22%] rounded-full border border-cyan-300/10 bg-cyan-300/[0.02] blur-[0.5px]" />
+        <div className="absolute inset-[38%] rounded-full bg-gradient-radial from-white/[0.08] to-transparent animate-drift-slow" />
       </motion.div>
     </div>
   );

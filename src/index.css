@@ -13,25 +13,38 @@
   }
 
   body {
-    background: #09090b;
+    background:
+      radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 28%),
+      radial-gradient(circle at 80% 12%, rgba(14, 165, 233, 0.08), transparent 20%),
+      #020617;
     color: #fafafa;
     font-family: 'Inter', system-ui, sans-serif;
     min-height: 100dvh;
   }
 
   ::selection {
-    background: rgba(59, 130, 246, 0.28);
+    background: rgba(59, 130, 246, 0.34);
     color: #fff;
   }
 
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.08);
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(59, 130, 246, 0.45);
+    background: rgba(59, 130, 246, 0.52);
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply border border-white/[0.08] bg-white/[0.04] backdrop-blur-xl;
+  }
+
+  .neon-border {
+    @apply border border-white/[0.08] shadow-[0_0_0_1px_rgba(59,130,246,0.08),0_16px_60px_rgba(0,0,0,0.28)];
   }
 }
 
@@ -56,5 +69,48 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  @keyframes drift {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(16px, -18px, 0) scale(1.04); }
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 0.34; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.08); }
+  }
+
+  @keyframes scan {
+    0% { transform: translateY(-12%); opacity: 0; }
+    15% { opacity: 0.7; }
+    50% { opacity: 0.28; }
+    100% { transform: translateY(18%); opacity: 0; }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+
+  .animate-drift {
+    animation: drift 14s ease-in-out infinite;
+  }
+
+  .animate-drift-slow {
+    animation: drift 20s ease-in-out infinite;
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 5.5s ease-in-out infinite;
+  }
+
+  .animate-scan {
+    animation: scan 10s linear infinite;
+  }
+
+  .animate-shimmer {
+    background-size: 200% 100%;
+    animation: shimmer 7s linear infinite;
   }
 }
