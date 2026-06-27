@@ -16,7 +16,7 @@ export function ResumeDispatcherModal({ isOpen, onClose }: ResumeDispatcherModal
   
   // Gmail SMTP Settings (Prefilled with user credentials)
   const [gmailUser, setGmailUser] = useState("anishdahiya44@gmail.com");
-  const [gmailPass, setGmailPass] = useState("sfrd vspl yxcz trda");
+  const [gmailPass, setGmailPass] = useState("pwcm xtha wmsf yrdg");
   const [showSettings, setShowSettings] = useState(false);
   
   // Form status
