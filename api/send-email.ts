@@ -38,13 +38,16 @@ export default async function handler(req: any, res: any) {
     });
   }
 
+  // Remove spaces from Gmail App Password (Gmail expects 16 contiguous characters)
+  const cleanGmailPass = gmailPass.replace(/\s+/g, '');
+
   try {
     // Setup Gmail SMTP Transporter
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
         user: gmailUser,
-        pass: gmailPass,
+        pass: cleanGmailPass,
       },
     });
 
