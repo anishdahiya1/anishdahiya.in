@@ -16,7 +16,7 @@ const WORD_VARIANTS = {
   visible: (i: number) => ({
     y: "0%",
     opacity: 1,
-    transition: { delay: 0.3 + i * 0.15, duration: 0.75, ease: [0.16, 1, 0.3, 1] },
+    transition: { delay: 0.3 + i * 0.15, duration: 0.75, ease: [0.16, 1, 0.3, 1] as const },
   }),
 };
 

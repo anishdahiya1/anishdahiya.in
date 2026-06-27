@@ -47,8 +47,8 @@ export function ContentGrid({ items }: { items: ContentPiece[] }) {
             {/* Body */}
             <div className="p-5 space-y-2">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <span className={`h-1.5 w-1.5 rounded-full ${cfg.dot}`} />
+                <div className="flex items-center gap-1.5">
+                  <Icon className={`h-3.5 w-3.5 ${cfg.accent}`} />
                   <span className={`text-[11px] font-mono uppercase tracking-widest ${cfg.accent}`}>
                     {item.platform}
                   </span>

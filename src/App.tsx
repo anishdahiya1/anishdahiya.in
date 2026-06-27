@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { Mail, Github, Linkedin, ArrowUpRight } from "lucide-react";
-import { StarfieldBackground } from "./components/StarfieldBackground";
+import { ThreeSpaceBackground } from "./components/ThreeSpaceBackground";
 import { CursorSpotlight } from "./components/CursorSpotlight";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
@@ -49,7 +49,7 @@ export default function App() {
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.15),transparent_26%),radial-gradient(circle_at_80%_12%,rgba(14,165,233,0.10),transparent_22%),radial-gradient(circle_at_bottom,rgba(15,23,42,0.85),transparent_60%)]" />
 
       {/* ── BACKGROUNDS (fixed) ── */}
-      <StarfieldBackground />
+      <ThreeSpaceBackground />
       <CursorSpotlight />
 
       {/* ── NAV ── */}
