@@ -13,6 +13,8 @@ import { ContentGrid } from "./components/ContentGrid";
 import { Testimonials } from "./components/Testimonials";
 import { AboutSection } from "./components/AboutSection";
 import { Footer } from "./components/Footer";
+import { ResumeDispatcherModal } from "./components/ResumeDispatcherModal";
+import { useState } from "react";
 import { projects, timeline, contentHighlights, testimonials, socials } from "./lib/data";
 
 const featured = projects.find((p) => p.featured)!;
@@ -44,6 +46,7 @@ function Divider() {
 }
 
 export default function App() {
+  const [isPortalOpen, setIsPortalOpen] = useState(false);
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-[#020617] text-zinc-50 antialiased">
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.15),transparent_26%),radial-gradient(circle_at_80%_12%,rgba(14,165,233,0.10),transparent_22%),radial-gradient(circle_at_bottom,rgba(15,23,42,0.85),transparent_60%)]" />
@@ -207,7 +210,8 @@ export default function App() {
         </SectionWrap>
       </main>
 
-      <Footer />
+      <Footer onPortalClick={() => setIsPortalOpen(true)} />
+      <ResumeDispatcherModal isOpen={isPortalOpen} onClose={() => setIsPortalOpen(false)} />
     </div>
   );
 }

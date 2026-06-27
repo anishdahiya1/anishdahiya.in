@@ -9,7 +9,7 @@ const social = [
   { label: "YouTube", href: socials.youtube, icon: Youtube },
 ];
 
-export function Footer() {
+export function Footer({ onPortalClick }: { onPortalClick?: () => void }) {
   return (
     <footer className="border-t border-white/[0.05] bg-zinc-950">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-14">
@@ -42,7 +42,7 @@ export function Footer() {
               ))}
             </div>
           </motion.div>
-
+          
           {/* Nav */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -88,8 +88,17 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="mt-12 flex items-center justify-between border-t border-white/[0.04] pt-6">
-          <p className="text-[11px] text-zinc-700">
-            {new Date().getFullYear()} Anish Dahiya
+          <p className="text-[11px] text-zinc-700 flex items-center gap-1.5">
+            <span>{new Date().getFullYear()} Anish Dahiya</span>
+            {onPortalClick && (
+              <button
+                onClick={onPortalClick}
+                className="opacity-20 hover:opacity-100 hover:text-cyan-400 transition-all duration-300"
+                aria-label="Secret Portal"
+              >
+                🔑
+              </button>
+            )}
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
