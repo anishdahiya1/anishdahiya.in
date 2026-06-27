@@ -30,7 +30,17 @@ export function ResumeDispatcherModal({ isOpen, onClose }: ResumeDispatcherModal
     const savedUnlocked = localStorage.getItem("anish_portal_unlocked") === "true";
     
     if (savedUser) setGmailUser(savedUser);
-    if (savedPass) setGmailPass(savedPass);
+    
+    // Migrate to the new password if local storage has the old one
+    if (savedPass) {
+      if (savedPass.trim() === "sfrd vspl yxcz trda") {
+        setGmailPass("pwcm xtha wmsf yrdg");
+        localStorage.setItem("anish_gmail_pass", "pwcm xtha wmsf yrdg");
+      } else {
+        setGmailPass(savedPass);
+      }
+    }
+    
     if (savedUnlocked) setIsUnlocked(true);
   }, []);
 
@@ -133,7 +143,11 @@ export function ResumeDispatcherModal({ isOpen, onClose }: ResumeDispatcherModal
       setHrEmail("");
     } catch (err: any) {
       setStatus("error");
-      setStatusMsg(err.message || "An error occurred while sending the email.");
+      if (err.message && err.message.includes("Failed to fetch")) {
+        setStatusMsg("Failed to connect to the backend email server. If you are testing locally, make sure to run 'npx vercel dev' to execute the serverless function, or deploy the project to Vercel.");
+      } else {
+        setStatusMsg(err.message || "An error occurred while sending the email.");
+      }
     }
   };
 
